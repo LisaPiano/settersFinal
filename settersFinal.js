@@ -32,17 +32,32 @@ class Student {
   get name(){
     return this._name;
   }
+  get major(){
+    return this._major;
+  }
 
   set name(name){
     this._name = name;
     console.log(`The name of the student is: ${name}`);
   }
 
+  set major(major){
+    if(this.level == "Junior" || this.level == "Senior"){
+       this._major = major;
+       } else {
+      this._major = "none";
+    }
+ 
+  }
+  
+
 
 }
 
-const student = new Student(3.9, 29);
+const student = new Student(3.9, 10);
 student.name = "Fred";
+student.major = "computer programming";
 
 console.log(student.level);
 console.log(student.name);
+console.log(student.major);
