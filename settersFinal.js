@@ -20,9 +20,9 @@ class Student {
   get level() {
     if(this.credits > 90){
       return "Senior";
-    } else if (this.credits >=61 && this.credits <= 90) {
+    } else if (this.credits >=61) {
       return "Junior"; 
-    } else if (this.credits >30 && this.credits <=60) {
+    } else if (this.credits >=30) {
       return "Sophomore";
     } else {
       return "Freshman";
@@ -30,6 +30,6 @@ class Student {
   }
 }
 
-const student = new Student(3.9, 40);
+const student = new Student(3.9, 29);
 
 console.log(student.level);
