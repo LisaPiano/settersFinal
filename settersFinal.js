@@ -28,8 +28,21 @@ class Student {
       return "Freshman";
     }
   }
+
+  get name(){
+    return this._name;
+  }
+
+  set name(name){
+    this._name = name;
+    console.log(`The name of the student is: ${name}`);
+  }
+
+
 }
 
 const student = new Student(3.9, 29);
+student.name = "Fred";
 
 console.log(student.level);
+console.log(student.name);
